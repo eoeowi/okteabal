@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: okteabal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: okteabal
+  template:
+    metadata:
+      labels:
+        app: okteabal
+    spec:
+      containers:
+      - image: okteto.dev/okteabal:latest
+        name: okteabal
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: Site
+          value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
+        - name: Vless_UUID
+          value: "ada42731-535f-4f6c-b525-8abd3d187508"
+        - name: Vless_Path
+          value: "/ytytduid"
+        - name: Vmess_UUID
+          value: "08b77f3c-6e45-4d17-82ef-1e3314206287"
+        - name: Vmess_Path
+          value: "/xcdtcdst"
+        - name: Share_Path
+          value: "/v2link"
